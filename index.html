@@ -60,8 +60,6 @@ body{
 
 /* =========================
    MAIN CARD
-   ========================= */
-
 .card{
   width:100%;
   max-width:560px;
@@ -76,6 +74,7 @@ body{
 
   position:relative;
   overflow:hidden;
+}
 }
 
 .header{
@@ -173,27 +172,32 @@ body{
    ========================= */
 
 .photo-zone{
-  position:relative;
+  position:absolute;
 
-  flex:1 1 0;
-  min-height:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:32px;
 
   width:100%;
+  height:auto;
 
   background:transparent;
 
   overflow:hidden;
+
+  z-index:0;
 }
 
 .portrait{
   position:absolute;
 
-  top:-24px;
+  top:-35px;
   left:0;
   right:0;
 
   width:100%;
-  height:calc(100% + 24px);
+  height:calc(100% + 35px);
 
   display:block;
 
@@ -201,6 +205,8 @@ body{
   object-position:center top;
 
   background:transparent;
+
+  z-index:0;
 }
 
 .photo-zone::before{
