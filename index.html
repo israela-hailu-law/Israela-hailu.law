@@ -66,6 +66,7 @@ body{
   width:100%;
   max-width:560px;
 
+  height:100dvh;
   min-height:100dvh;
 
   display:flex;
@@ -76,10 +77,6 @@ body{
   position:relative;
   overflow:hidden;
 }
-
-/* =========================
-   HEADER
-   ========================= */
 
 .header{
   width:100%;
@@ -98,11 +95,6 @@ body{
   position:relative;
   z-index:2;
 }
-}
-
-/* =========================
-   MAIN LOGO
-   ========================= */
 
 .logo{
   width:clamp(200px, 63vw, 290px);
@@ -176,39 +168,32 @@ body{
     0 5px 14px rgba(0,0,0,0.28),
     inset 0 1px 0 rgba(255,255,255,0.10);
 }
-
 /* =========================
    PHOTO
    ========================= */
 
-..portrait{
-  position:absolute;
+.photo-zone{
+  position:relative;
 
-  top:-80px;
-  left:0;
+  flex:1 1 0;
+  min-height:0;
 
   width:100%;
-  height:calc(100% + 80px);
-
-  display:block;
-
-  object-fit:cover;
-  object-position:center top;
 
   background:transparent;
-}
-}
+
+  overflow:hidden;
 }
 
 .portrait{
   position:absolute;
 
-  top:-200px;
+  top:-24px;
   left:0;
   right:0;
 
   width:100%;
-  height:calc(100% + 200px);
+  height:calc(100% + 24px);
 
   display:block;
 
@@ -217,14 +202,6 @@ body{
 
   background:transparent;
 }
-}
-}
-}
-
-/*
-  שכבת כהות עדינה רק בתחתית,
-  כדי שהכפתורים יהיו קריאים.
-*/
 
 .photo-zone::before{
   content:"";
