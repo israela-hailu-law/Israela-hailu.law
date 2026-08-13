@@ -140,26 +140,29 @@ body {
 ========================================================= */
 
 .practice-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
 
-  gap:10px 12px;
+  gap:12px 14px;
 
   width:100%;
-  padding-inline:18px;
-}
-}
+  max-width:100%;
 
-
-/* =========================================================
-   PRACTICE CHIP
-========================================================= */
+  padding-inline:14px;
+}
 
 .chip{
-  width:100%;
-  max-width:none;
+  appearance:none;
+
+  flex:0 0 auto;
+
+  width:max-content;
+  max-width:calc(100vw - 32px);
 
   background:rgba(40,38,37,0.18);
+
   border:1px solid rgba(237,235,232,0.34);
 
   backdrop-filter:blur(12px);
@@ -173,13 +176,17 @@ body {
 
   font-family:inherit;
   font-weight:400;
+
+  /* קטן מעט מהמקור */
   font-size:16px;
-  line-height:1.15;
+  line-height:1.2;
 
   border-radius:22px;
-  padding:10px 12px;
+
+  padding:10px 22px;
 
   text-align:center;
+
   white-space:nowrap;
 
   display:flex;
