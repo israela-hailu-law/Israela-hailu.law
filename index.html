@@ -63,18 +63,18 @@ body{
    ========================= */
 
 .card{
-  width:100%;
-  max-width:560px;
-
+  height:100dvh;
   min-height:100dvh;
+  max-width:560px;
+  margin:0 auto;
 
   display:flex;
   flex-direction:column;
 
   background:var(--bg-deep);
-
   position:relative;
   overflow:hidden;
+}
 }
 
 /* =========================
@@ -364,25 +364,20 @@ body{
    ========================= */
 
 .footer-bar{
+  flex:0 0 auto;
   width:100%;
 
-  height:32px;
+  background:var(--footer-navy);
 
-  padding:
-    0
-    16px
-    var(--safe-b);
+  padding:7px 16px calc(7px + var(--safe-b));
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  flex:0 0 auto;
-
-  background:var(--footer-navy);
-
   position:relative;
-  z-index:3;
+  z-index:10;
+}
 }
 
 .maze-logo{
