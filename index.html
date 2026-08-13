@@ -184,20 +184,10 @@ body{
 
 .photo-zone{
   position:relative;
-
-  width:100%;
-
-  /*
-    הגובה של אזור התמונה.
-    התמונה עצמה נשארת ביחס שלה,
-    ולא נמתחת.
-  */
-  height:520px;
-
-  flex:0 0 520px;
-
+  flex:1 1 auto;
+  min-height:0;
+  height:100%;
   background:var(--bg-deep);
-
   overflow:hidden;
 }
 
@@ -464,11 +454,10 @@ body{
     justify-content:center;
   }
 
-  .card{
-    width:560px;
-    max-width:560px;
-
-    min-height:0;
+.card{
+  height:100dvh;
+  max-height:100dvh;
+  min-height:0;
     height:auto;
 
     margin:24px auto;
