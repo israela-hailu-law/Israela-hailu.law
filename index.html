@@ -122,19 +122,20 @@ body{
    ========================= */
 
 .practice-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  justify-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   align-items:center;
-  gap:10px 10px;
+  gap:10px 12px;
   width:100%;
+  max-width:100%;
   padding-inline:12px;
 }
 }
-
+}
 .chip{
-  width:100%;
-  max-width:none;
+  appearance:none;
+  flex:0 0 auto;
 
   background:rgba(40,38,37,0.18);
   border:1px solid rgba(237,235,232,0.34);
@@ -154,7 +155,7 @@ body{
   line-height:1.15;
 
   border-radius:22px;
-  padding:9px 10px;
+  padding:9px 20px;
 
   text-align:center;
   white-space:nowrap;
@@ -162,6 +163,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+}
 }
 
 /* =========================
